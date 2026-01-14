@@ -10,8 +10,9 @@ echo 'options btusb enable_autosuspend=0' | sudo tee /etc/modprobe.d/btusb-no-au
 ```
 
 Then reload the module (do this only when you can temporarily lose Bluetooth):
-
+```
 sudo systemctl stop bluetooth
 sudo modprobe -r btusb
 sudo modprobe btusb
 sudo systemctl start bluetooth
+```
