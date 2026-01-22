@@ -1,5 +1,8 @@
 # Browser
 ## Zen
+### Extensions
+- Adblocker: uBlock Origin
+  
 ### If you get problems with context menus (ex. right-click menu) not working / flickering / scaled weirdly
 Go to `about:config`  
 Set `widget.wayland.fractional-scale.enabled` to `false`
