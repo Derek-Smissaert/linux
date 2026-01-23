@@ -1,3 +1,10 @@
+# Electron
+Electron just does not want to play nice with wayland, so here is a list of command line args I collected over the years  
+Some are wayland related, some gpu, some are for the trackpad, just search for each in google and check if you need it.
+```
+--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation --password-store=gnome-libsecret --enable-chrome-browser-cloud-management --use-gl=egl
+```
+
 # Browser
 ## Zen
 ### Extensions
