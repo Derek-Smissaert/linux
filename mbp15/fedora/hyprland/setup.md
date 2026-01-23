@@ -138,8 +138,9 @@ nmcli -g NAME connection show | grep -i eduroam
 ### assume it is named "eduroam" (adjust if yours differs)
 Some AP/client combinations behave poorly with 802.11w PMF negotiation.  
 NetworkManager lets you set PMF to `default|disable|optional|required`
-
-`nmcli con mod "eduroam" 802-11-wireless-security.pmf disable`
+```
+nmcli con mod "eduroam" 802-11-wireless-security.pmf disable
+```
 
 ### Connect to eduroam
 ```
