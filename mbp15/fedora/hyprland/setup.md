@@ -5,6 +5,12 @@ Some are wayland related, some gpu, some are for the trackpad, just search for e
 --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation --password-store=gnome-libsecret --enable-chrome-browser-cloud-management --use-gl=egl
 ```
 
+## Best practice for command line args
+I would recommend to copy a `.desktop` file from either `/usr/share/applications/` or `/usr/local/share/applications/` to `~/.local/share/applications/`.
+And then add the command line args to the `Exec=` calls in the `.desktop` file.
+
+I did find this annoying when calling vscode from the terminal, because then the args are not applied, but I made an alias that has the args applied.
+
 # Browser
 ## Zen
 ### Extensions
