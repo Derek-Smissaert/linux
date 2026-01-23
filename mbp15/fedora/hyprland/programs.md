@@ -1,3 +1,3 @@
-Browser: Zen browser from copr
-Whatsapp: https://github.com/piec/elecwhat/
-editor: zed with top bar removed (TODO: create diff file)
+- Browser: Zen browser from copr
+- Whatsapp: https://github.com/piec/elecwhat/
+- editor: zed with top bar removed (TODO: create diff file)
