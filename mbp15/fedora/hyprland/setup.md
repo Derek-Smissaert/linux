@@ -7,7 +7,7 @@ the folder includes the file `ls-goto.bashrc` which provides a `goto` function, 
 [derek@fedora ~]$ ls /
 afs  bin  boot  dev  etc  home  image  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 [derek@fedora ~]$ goto
-[derek@fedora /]$ 
+[derek@fedora /]$
 ```
 
 theres an ```alias diff=icdiff``` for which you need to install icdiff:
@@ -16,11 +16,11 @@ python3 -m pip install icdiff
 ```
 
 ## tmux
-copy `.tmux.conf` and `.tmux/toggle-terminal.sh` into your home directory  
+copy `.tmux.conf` and `.tmux/toggle-terminal.sh` into your home directory
 `ctrl-j` now opens a terminal at the bottom like vscode
 
 # Electron
-Electron just does not want to play nice with wayland, so here is a list of command line args I collected over the years  
+Electron just does not want to play nice with wayland, so here is a list of command line args I collected over the years
 Some are wayland related, some gpu, some are for the trackpad, just search for each in google and check if you need it.
 ```
 --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation --password-store=gnome-libsecret --enable-chrome-browser-cloud-management --use-gl=egl
@@ -34,11 +34,13 @@ I did find this annoying when calling vscode from the terminal, because then the
 
 # Browser
 ## Zen
+get from copr repo
+
 ### Extensions
 - Adblocker: uBlock Origin
-  
+
 ### If you get problems with context menus (ex. right-click menu) not working / flickering / scaled weirdly
-Go to `about:config`  
+Go to `about:config`
 Set `widget.wayland.fractional-scale.enabled` to `false`
 
 This is a Firefox setting that enables support for Wayland's native fractional scaling protocol, allowing crisp, pixel-perfect scaling (e.g., 125%, 150%) on high-DPI displays, fixing blurriness seen with older scaling methods by leveraging `wp-fractional-scale-v1` for better performance and sharpness, though users might encounter UI glitches like flickering menus or cut-off elements depending on their DE and Firefox version, requiring careful testing.
@@ -125,7 +127,7 @@ This “disconnect then connect” retry is a known practical fix for flaky head
 * If they keep connecting to your phone/tablet instead: disconnect/disable Bluetooth on the other device during the initial pairing attempt.
 
 ### Sometimes my bluetooth just doesn't load, maybe try this:
-Found everywhere on the internet that disabling btusb autosuspend can help and that Broadcom/Apple internal USB Bluetooth controllers are frequently sensitive to USB power management. A common mitigation is disabling btusb autosuspend.  
+Found everywhere on the internet that disabling btusb autosuspend can help and that Broadcom/Apple internal USB Bluetooth controllers are frequently sensitive to USB power management. A common mitigation is disabling btusb autosuspend.
 I don't know if it really works for me, but this modification is pretty harmless.
 
 #### method 1
@@ -150,7 +152,7 @@ sudo systemctl start bluetooth
 ```
 
 ## Eduroam
-You probably already have this installed  
+You probably already have this installed
 ```
 sudo dnf install -y NetworkManager-wifi wpa_supplicant python3
 ```
@@ -170,7 +172,7 @@ nmcli -g NAME connection show | grep -i eduroam
 ```
 
 ### assume it is named "eduroam" (adjust if yours differs)
-Some AP/client combinations behave poorly with 802.11w PMF negotiation.  
+Some AP/client combinations behave poorly with 802.11w PMF negotiation.
 NetworkManager lets you set PMF to `default|disable|optional|required`
 ```
 nmcli con mod "eduroam" 802-11-wireless-security.pmf disable
@@ -184,10 +186,10 @@ nmcli --ask con up "eduroam"
 
 ### If it still doesn't work
 Try with these settings:
-- Disable Wi-Fi power saving for eduroam:  
+- Disable Wi-Fi power saving for eduroam:
   ```nmcli con mod "eduroam" 802-11-wireless.powersave 2```
   Value `2` = disable Wi-Fi power saving.
-- Make eduroam use your permanent (hardware) MAC:  
+- Make eduroam use your permanent (hardware) MAC:
   ```nmcli con mod "eduroam" 802-11-wireless.cloned-mac-address permanent```
   NetworkManager supports values like `permanent`, `random`, `stable` for cloned MAC behavior
   `permanent` is what you want for eduroam troubleshooting.
