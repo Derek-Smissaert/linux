@@ -1,3 +1,24 @@
+# Terminal
+## aliases
+copy the `.bashrc.d` folder from this repo to your home folder
+
+the folder includes the file `ls-goto.bashrc` which provides a `goto` function, which `cd`'s into the last `ls`'ed directory
+```
+[derek@fedora ~]$ ls /
+afs  bin  boot  dev  etc  home  image  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[derek@fedora ~]$ goto
+[derek@fedora /]$ 
+```
+
+theres an ```alias diff=icdiff``` for which you need to install icdiff:
+```
+python3 -m pip install icdiff
+```
+
+## tmux
+copy `.tmux.conf` and `.tmux/toggle-terminal.sh` into your home directory  
+`ctrl-j` now opens a terminal at the bottom like vscode
+
 # Electron
 Electron just does not want to play nice with wayland, so here is a list of command line args I collected over the years  
 Some are wayland related, some gpu, some are for the trackpad, just search for each in google and check if you need it.
