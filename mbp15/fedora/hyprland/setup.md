@@ -1,3 +1,9 @@
+todo:
+facetimehd
+gpu / graphics
+keyboard fn as ctrl
+
+
 # Terminal
 ## aliases
 copy the `.bashrc.d` folder from this repo to your home folder
