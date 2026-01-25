@@ -1,8 +1,19 @@
 todo:
 facetimehd
 gpu / graphics
-keyboard fn as ctrl
 
+# Apple
+## Keyboard
+I am used to standard layout, so I swap the fn and ctrl keys  
+I also used to swap the super and alt keys, but having the super key next to space is actually really comfortable
+```
+[derek@fedora ~]$ cat /etc/modprobe.d/hid_apple.conf 
+options hid_apple swap_fn_leftctrl=1
+[derek@fedora ~]$ sudo dracut --force
+```
+
+## Webcam
+todo
 
 # Terminal
 ## aliases
