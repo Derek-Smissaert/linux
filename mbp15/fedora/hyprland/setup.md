@@ -2,6 +2,20 @@ todo:
 facetimehd
 gpu / graphics
 
+# Enable RPM Fusion for more packages
+The RPM Fusion repositories for Fedora Linux and Red Hat-based distributions provides software not included by default due to licensing, patent restrictions, or legal restrictions (e.g., restricted media codecs, NVIDIA proprietary drivers). It acts as a trusted, community-maintained extension that simplifies the installation of commonly needed multimedia, hardware, and desktop applications.
+
+To enable the Free repository, use:
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+
+Optionally, enable the Nonfree repository:
+```
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+The first time you attempt to install packages from these repositories, the dnf utility prompts you to confirm the signature of the repositories. Confirm it.
+
 # Apple
 ## Keyboard
 I am used to standard layout, so I swap the fn and ctrl keys  
