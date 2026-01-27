@@ -16,6 +16,10 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 ```
 The first time you attempt to install packages from these repositories, the dnf utility prompts you to confirm the signature of the repositories. Confirm it.
 
+## complete ffmpeg and more codecs
+Just follow this page  
+<https://rpmfusion.org/Howto/Multimedia>
+
 # Apple
 ## Keyboard
 I am used to standard layout, so I swap the fn and ctrl keys  
