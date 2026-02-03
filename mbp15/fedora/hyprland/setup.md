@@ -2,6 +2,12 @@ todo:
 facetimehd
 gpu / graphics
 
+# Calendar
+Google hides some calendars by default and doesn't link to the configuration page to address this.
+If you're signed into multiple Google accounts, you can change the number 0 in the URL to switch accounts.
+
+<https://calendar.google.com/calendar/u/0/syncselect>
+
 # Enable RPM Fusion for more packages
 The RPM Fusion repositories for Fedora Linux and Red Hat-based distributions provides software not included by default due to licensing, patent restrictions, or legal restrictions (e.g., restricted media codecs, NVIDIA proprietary drivers). It acts as a trusted, community-maintained extension that simplifies the installation of commonly needed multimedia, hardware, and desktop applications.
 
