@@ -16,4 +16,4 @@ hyprland:
 - lock: swaylock-effects
 
 python:
-- 
+- rich
