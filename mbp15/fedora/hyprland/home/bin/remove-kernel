@@ -34,7 +34,7 @@ remove_kernel_version() {
     running=$(get_running_kernel)
 
     # Verify this version is actually installed
-    if ! rpm -qa kernel-core | grep -q "$version"; then
+    if ! get_installed_versions | grep -qF "$version"; then
         echo -e "${RED}Error:${NC} Kernel version '$version' is not installed."
         echo ""
         echo "Installed versions:"
